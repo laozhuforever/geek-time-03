@@ -4,10 +4,11 @@ ROW FORMAT SERDE 'org.apache.hadoop.hive.contrib.serde2.MultiDelimitSerDe'
 WITH SERDEPROPERTIES ("field.delim" = "::")
 LOCATION '/data/hive/movies.dat';
 
+----
 create  table t_user_zsp(userid int, sex string, age int, occupation int, zipcode int
 ) ROW FORMAT SERDE 'org.apache.hadoop.hive.contrib.serde2.MultiDelimitSerDe'
 WITH SERDEPROPERTIES ("field.delim" = "::") location '/data/hive/users.dat’;
-
+---
 create  table t_rating_zsp(userid int, movieid int, rate smallint, times bigint) ROW FORMAT SERDE 'org.apache.hadoop.hive.contrib.serde2.MultiDelimitSerDe'
 WITH SERDEPROPERTIES ("field.delim" = "::") LOCATION '/data/hive/ratings.dat';
 
