@@ -1,3 +1,4 @@
+--DDL--
 CREATE TABLE  t_movie_zsp(
 MovieID STRING, MovieName STRING, MovieType STRING)
 ROW FORMAT SERDE 'org.apache.hadoop.hive.contrib.serde2.MultiDelimitSerDe'
